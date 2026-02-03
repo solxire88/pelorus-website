@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #0d1029;
+  --foreground: #e8f4f6;
+  --card: #252b5a;
+  --card-foreground: #e8f4f6;
+  --popover: #2a306f;
+  --popover-foreground: #e8f4f6;
+  --primary: #c3e0e5;
+  --primary-foreground: #1a1f4a;
+  --secondary: #1e2350;
+  --secondary-foreground: #c3e0e5;
+  --muted: #1a1f4a;
+  --muted-foreground: #9ca3af;
+  --accent: #4a9ead;
+  --accent-foreground: #0d1029;
+  --destructive: #ff6b6b;
+  --destructive-foreground: #ffffff;
+  --border: #2d3366;
+  --input: #1e2350;
+  --ring: #4a9ead;
+  --chart-1: #4a9ead;
+  --chart-2: #c3e0e5;
+  --chart-3: #2a306f;
+  --chart-4: #6b7fd4;
+  --chart-5: #89d4e0;
+  --radius: 1rem;
+  --sidebar: #0d1029;
+  --sidebar-foreground: #e8f4f6;
+  --sidebar-primary: #c3e0e5;
+  --sidebar-primary-foreground: #1a1f4a;
+  --sidebar-accent: #1a1f4a;
+  --sidebar-accent-foreground: #c3e0e5;
+  --sidebar-border: #2d3366;
+  --sidebar-ring: #4a9ead;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-foreground;
+    background-color: #0b1022;
+    background-image:
+      radial-gradient(1200px 800px at 10% -10%, rgba(71, 122, 255, 0.35), transparent 60%),
+      radial-gradient(900px 700px at 90% 0%, rgba(72, 209, 204, 0.25), transparent 55%),
+      radial-gradient(1000px 900px at 50% 120%, rgba(9, 89, 120, 0.45), transparent 60%),
+      linear-gradient(180deg, rgba(10, 16, 34, 0.9) 0%, rgba(9, 14, 28, 0.95) 60%, rgba(8, 12, 24, 1) 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23noise)' opacity='0.25'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover, cover, cover, cover, 160px 160px;
+    background-blend-mode: screen, screen, normal, normal, soft-light;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
