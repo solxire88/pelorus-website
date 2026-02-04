@@ -317,11 +317,14 @@ const translations = {
         message: "Message",
         messagePlaceholder: "Tell us about your project...",
         send: "Send Message",
+        sending: "Sending...",
         sent: "Message Sent",
       },
       toast: {
         title: "Thanks for reaching out!",
-        description: "Please email us or DM on Instagram to finalize your inquiry.",
+        description: "We received your message and will reply within 24–48 hours.",
+        errorTitle: "Message not sent",
+        errorDescription: "Something went wrong. Please try again in a moment.",
       },
     },
     // Footer
@@ -644,11 +647,14 @@ const translations = {
         message: "Message",
         messagePlaceholder: "Parlez-nous de votre projet...",
         send: "Envoyer le message",
+        sending: "Envoi en cours...",
         sent: "Message envoyé",
       },
       toast: {
         title: "Merci de nous avoir contacté !",
-        description: "Envoyez-nous un email ou un DM sur Instagram pour finaliser votre demande.",
+        description: "Nous avons bien reçu votre message et reviendrons vers vous sous 24 à 48 heures.",
+        errorTitle: "Message non envoyé",
+        errorDescription: "Une erreur est survenue. Veuillez réessayer dans un instant.",
       },
     },
     // Footer

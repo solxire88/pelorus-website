@@ -22,20 +22,49 @@ export function ContactSection() {
         message: "",
     })
     const [isSubmitted, setIsSubmitted] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        setIsSubmitted(true)
-        toast({
-            title: t.contact.toast.title,
-            description: t.contact.toast.description,
-        })
-        // Reset after showing success
-        setTimeout(() => {
-            setIsSubmitted(false)
-            setFormData({ name: "", company: "", email: "", message: "" })
-            setSelectedService(null)
-        }, 3000)
+        if (isSubmitting) {
+            return
+        }
+
+        setIsSubmitting(true)
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    ...formData,
+                    service: selectedService,
+                }),
+            })
+
+            if (!response.ok) {
+                throw new Error("Failed to send")
+            }
+
+            setIsSubmitted(true)
+            toast({
+                title: t.contact.toast.title,
+                description: t.contact.toast.description,
+            })
+            // Reset after showing success
+            setTimeout(() => {
+                setIsSubmitted(false)
+                setFormData({ name: "", company: "", email: "", message: "" })
+                setSelectedService(null)
+            }, 3000)
+        } catch (error) {
+            toast({
+                title: t.contact.toast.errorTitle,
+                description: t.contact.toast.errorDescription,
+                variant: "destructive",
+            })
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -184,11 +213,16 @@ export function ContactSection() {
                                 />
                             </div>
 
-                            <GlassButton type="submit" className="w-full" disabled={isSubmitted}>
+                            <GlassButton type="submit" className="w-full" disabled={isSubmitted || isSubmitting}>
                                 {isSubmitted ? (
                                     <>
                                         <CheckCircle className="w-5 h-5" />
                                         {t.contact.form.sent}
+                                    </>
+                                ) : isSubmitting ? (
+                                    <>
+                                        <Send className="w-5 h-5" />
+                                        {t.contact.form.sending}
                                     </>
                                 ) : (
                                     <>
