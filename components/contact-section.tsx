@@ -69,10 +69,10 @@ export function ContactSection() {
                             <div>
                                 <h3 className="text-lg font-semibold text-foreground mb-1">{t.contact.emailUs}</h3>
                                 <a
-                                    href="mailto:hello@pelorus.agency"
+                                    href="mailto:pelorusproduction@gmail.com"
                                     className="text-muted-foreground hover:text-foreground transition-colors"
                                 >
-                                    hello@pelorus.agency
+                                    pelorusproduction@gmail.com
                                 </a>
                             </div>
                         </GlassCard>
