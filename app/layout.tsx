@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description: 'Pelorus helps businesses build websites, apps, automations, and standout branding/content. Navigate growth with software + creative.',
   generator: 'Pelorus Agency',
   keywords: ['software development', 'creative agency', 'web design', 'mobile apps', 'branding', 'social media management'],
+  icons: {
+    icon: "/PelorusFavIcon.svg",
+  },
 }
 
 export const viewport: Viewport = {
