@@ -24,7 +24,7 @@ export function Footer() {
                     <div>
                         <a href="#" className="flex items-center gap-2 group mb-4">
                             <DolphinIcon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-110" />
-                            <span className="text-xl font-semibold text-foreground font-brand">pelorusproduction</span>
+                            <span className="text-xl font-semibold text-foreground font-brand">Pelorus</span>
                         </a>
                         <p className="text-sm text-muted-foreground">
                             {t.footer.tagline}

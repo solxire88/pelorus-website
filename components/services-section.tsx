@@ -310,7 +310,7 @@ export function ServicesSection() {
                 {/* Tabs */}
                 <Tabs defaultValue="software" className="w-full">
                     <div className="flex justify-center mb-10">
-                        <TabsList className="glass border border-border/50 p-1 rounded-xl">
+                        <TabsList variant="line" className="border border-border/50 p-1 rounded-xl">
                             <TabsTrigger
                                 value="software"
                                 className="px-6 py-2.5 rounded-lg text-sm font-medium transition-all data-[state=active]:bg-accent/20 data-[state=active]:text-accent data-[state=inactive]:text-muted-foreground"
