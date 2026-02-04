@@ -58,7 +58,7 @@ export function Footer() {
                             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                         >
                             <Instagram className="w-5 h-5" />
-                            <span>@pelorus</span>
+                            <span>@pelorusproduction</span>
                         </a>
                     </div>
                 </div>
