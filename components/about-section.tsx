@@ -36,7 +36,7 @@ export function AboutSection() {
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                <span className="text-foreground font-semibold">Pelorus</span> — {t.about.description1.replace("Pelorus — ", "")}
+                <span className="text-foreground font-semibold font-brand">Pelorus</span> — {t.about.description1.replace("Pelorus — ", "")}
               </p>
               <p>
                 {t.about.description2}

@@ -41,7 +41,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Inter', 'Inter Fallback', system-ui, sans-serif;
+  --font-serif: 'Playfair'
+  --font-sans: 'Manrope', 'Sora Fallback', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -101,5 +102,11 @@
   }
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-brand {
+    font-family: var(--font-brand), serif;
   }
 }

@@ -41,7 +41,7 @@ export function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
           <DolphinIcon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-110" />
-          <span className="text-xl font-semibold text-foreground">Pelorus</span>
+          <span className="text-xl font-semibold text-foreground font-brand">Pelorus</span>
         </a>
 
         {/* Desktop Navigation */}

@@ -10,18 +10,18 @@ import { Footer } from "@/components/footer"
 import { Toaster } from "@/components/ui/toaster"
 
 export default function Home() {
-  return (
-    <main className="min-h-screen relative bg-background">
-      <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <SubscriptionSection />
-      <WorkSection />
-      <ProcessSection />
-      <AboutSection />
-      <ContactSection />
-      <Footer />
-      <Toaster />
-    </main>
-  )
+    return (
+        <main className="min-h-screen relative bg-background">
+            <Navbar />
+            <HeroSection />
+            <ServicesSection />
+            <SubscriptionSection />
+            {/* <WorkSection /> */}
+            <ProcessSection />
+            <AboutSection />
+            <ContactSection />
+            <Footer />
+            <Toaster />
+        </main>
+    )
 }

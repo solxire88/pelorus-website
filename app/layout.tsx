@@ -1,13 +1,14 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter, Geist_Mono } from 'next/font/google'
+import { Manrope, Geist_Mono, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { I18nProvider } from '@/lib/i18n'
 import { ServiceProvider } from '@/lib/service-context'
 import './globals.css'
 
-const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const _sora = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-brand" });
 
 export const metadata: Metadata = {
   title: 'Pelorus | Software + Creative Agency',
@@ -29,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body className={`${_sora.variable} ${_playfair.variable} font-sans antialiased`}>
         <I18nProvider>
           <ServiceProvider>
             {children}
